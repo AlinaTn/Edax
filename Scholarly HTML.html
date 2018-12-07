@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Report</title>
+    </head>
+
+
+    <body>
+        <header>
+            <h1>Technical Report</h1>
+        </header>
+
+        <div role="contentinfo">
+            <section typeof="sa:AuthorsList">
+                <h2>Authors</h2>
+                <ul>
+                    <li typeof="sa:Contributorrole" property="schema:author">
+                        <meta property="schema:givenName" content="Adina">
+                        <meta property="schema:familyName" content="Zaharia">
+                        <span property="schema:name">Adina Zaharia</span>
+                    </li>
+                    <ul>
+                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                            <a href="mailto:adinaazaharia@gmail.com" property="schema:email">
+                                adinaazaharia@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <li typeof="sa:Contributorrole" property="schema:author">
+                        <meta property="schema:givenName" content="Alina">
+                        <meta property="schema:familyName" content="Tenea">
+                        <span property="schema:name">Alina Tenea</span>
+                    </li>
+                    <ul>
+                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                            <a href="mailto:alina.tenea95@gmail.com" property="schema:email">
+                                alina.tenea95@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <li typeof="sa:Contributorrole" property="schema:author">
+                        <meta property="schema:givenName" content="Marius">
+                        <meta property="schema:familyName" content="Siminic">
+                        <span property="schema:name">Marius Siminic</span>
+                    </li>
+                    <ul>
+                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                            <a href="mailto:siminicmarius@gamil.com" property="schema:email">
+                                siminicmarius@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+              <h1>Content</h1>
+              <ol>
+			  <li>
+                  <a href="#introduction-section">Abstract</a>
+                </li>
+                <li>
+                  <a href="#introduction-section">Introduction</a>
+                </li>
+				<li>
+                  <a href="#methodology-section">Methodology</a>
+                </li>
+                <li>
+                  <a href="#ideas-concepts-section">Ideas and concepts</a>
+                </li>
+                <li>
+                  <a href="#methods-section">Ways of using the website</a>
+                </li>
+                <li>
+                  <a href="#conclusions-section">Conclusion</a>
+                </li>
+                <li>
+                  <a href="#upcoming-updates-section">Upcoming Updates</a>
+                </li> 
+				<li>
+                  <a href="#upcoming-updates-section">References</a>
+                </li> 
+              </ol>
+            </section>
+        </div>
+		
+		<section id="abstract-section" role="doc-abstract">
+            <h1>Abstract</h1>
+            <p>
+              With the increased exposure to tourists, historical monuments are at an ever-growing risk of disappearing.
+			  Building Information Modelling (BIM) offers a process of digitally documenting of all the features that are made or incorporated into the building over its life-span, thus affords unique opportunities for information preservation. 
+			  BIM of historical buildings are called Historical Building Information Models (HBIM). 
+			  This involves documenting a building in detail throughout its history. 
+              In this project, we discuss how to establish an architectural infrastructure and database of a heritage site, preserve and then interact with it through an immersive environment that leverages BIM for exploring historic buildings. 
+			  In our proposed approach, the site is based on many factors such as architectural value, size, and accessibility. 
+			  The 3D model is extracted from the public data about the Romanian ethnographic outdoor monuments, after which the elements of the 3D objects are identified by creating a database using the BIM software platform (Autodesk Revit). 
+			  The use of modern and widely accessible game engine technology (Unity3D) is explored, allowing the user to fully embed and interact with the scene using handheld devices. The details of implementing an integrated pipeline between HBIM, GIS and augmented and virtual reality (AVR) tools and the findings of the work are presented. 
+
+            </p>
+        </section>
+        
+        <section id="introduction-section" role="doc-introduction">
+            <h1>Introduction</h1>
+            <p>
+              Cultural and historical heritages form an integral part of the national identity. 
+			  Heritage sites, structures and monuments play a major role in the collective memory of a society. 
+			  Such sites act as a bridge between the present and the past, and offer attractive landmarks to the city, while attracting foreign tourists, which, in turn, can help boost local economies. 
+			  Therefore, there is an increasing need for proper documentation and preservation of heritage sites and monuments using modern technologies. 
+			  Sufficient documentation helps to monitor the unavoidable degradation of sites due to natural disasters, negligence or traumatic events, such as war. 
+			  Together, this helps build better maintenance and more effective management systems and tools for heritage sites.
+			  In the past, heritage documentation mainly relied on human interpretation such as hand drawings, on-site measurement, sculptures, and pictures, which was time consuming and less precise. 
+			  The power of technology has been increasingly utilized in recent years due to the evolution of architectural visualization from paper drawing to screen displaying to virtual 3D, which provided for better understanding, visual communication and interaction within a scene; it also provided additional ways to capture and display the materials, colors, decorative information, and so forth, in order to obtain more accurate results. 
+              Virtual Reality (VR) is defined by Steuer (1992) as “a real or simulated environment in which a perceiver experiences telepresence”. 
+			  The use of e-documentation has the potential to integrate with an enhanced virtual environment where the user can experience a virtual walk through the heritage site without having to visit it physically. It also can help tourists in choosing potential sites to visit before planning their travel. 
+			  In a similar way, an augmented reality (AR) system is a combination between real and computer-created information interactively in a real environment, and in real time which aligns virtual objects with real world/physical ones (Höllerer & Feiner, 2004). 
+			  Thus, it can also be used to project computer-generated objects onto the heritage site to digitally re-construct a particular time in history, giving the user a more fulfilling experience. Buckland & Wilcock (1973) predicted that computers would be used to reconstruct archaeological sites. 
+			  Indeed, the first step towards 3D e-documentation of archaeological objects was published little more than 10 years later, in 1985, by Leo Biek. 
+			  Later, extensive research was conducted on electronic and digital documentation of sites and artefacts, such as: The Roman Bath and the Roman military bathhouse at Caerleon, South Wales (Arnold et al., 1989); Michelangelo’s sculptures (ten statues, including the David) in Florence, Italy (Levoy et al., 2000); and, An ancient marble map of Rome, the Forma Urbis Romae, approximated 18m in width by 13m in height which constructed in the early 3rd century (Koller & Levoy, 2006).
+		   
+		   </p>
+        </section>
+		
+		
+        <section id="methodology-section">
+            <h1>Methodology</h1>
+            <p>
+              As the target of the proposed project is to create a holistic application for immersive environment applications, the final output will have multiple facets, and depending on the requirement, 3D models with different levels of details and links to contextual information. 
+			  To use the created model for the proposed holistic application, it will be required to feed the models to AVR platforms and to collate the necessary historical and architectural information that will be useful for documentation, preservation, and tourism purposes. 
+			  The capabilities of the currently available VR and AR tools will be blended and used in an integrated way, enabling the users to virtually experience and interact with the site from remote locations. 
+			  The work is based on a digital library of the heritage architectural elements of the Europeana site in order to study and understand the evolution of the architectural heritage of the cities. This library will also be helpful for possible future applications, such as physical reconstruction of degraded monuments, gaming designs and educational purposes. Therefore, the solution has the following components:
+              1. A workflow developed to integrate LiDAR-Based, Image- Based and CAD Modelling Technologies and utilize it to generate a 3D model of the target site. 
+              2. Creation of a 3D models library of heritage architectural elements with high levels of detail and geometrical accuracy.
+              3. A thorough study of the heritage architectural elements to provide the future users with relevant data to understand the heritage and its evolution. 
+              4. 3D models implemented using BIM tools integrated into a Geospatial information system to provide semantically rich information models and seamless interaction with a virtual and augmented reality system. 
+              5. Use and management of the output of 3D models for the development of a holistic AVR application, which will provide the users with an immersive experience complemented with interactive contextual information.
+              In our proposed approach, the site is based on many factors such as architectural value, size, and accessibility. The 3D model is extracted from the public data about the Romanian ethnographic outdoor monuments, after which the elements of the 3D object will be identified by creating a database using the BIM software platform. 
+              Revit software, for instance, is a BIM modelling platform (Autodesk, 2011), which can be used to create a BIM type analyses on the 3D object. In addition, an integration of the 3D BIM model into a 3D GIS will be implemented for further management and analysis. Texture details are then reapplied to generate a highly detailed rendition of the object from all angles that can be visualized in a specifically tailored web application or tested in real-time, with full fidelity, using a game engine like Unity 3D (Unity, 2017). Then, the virtual and augmented handheld devices can be used to present the information to the user. 
+ 
+
+            </p>
+        </section>
+         <section id="ideas-concepts-section">
+            <h1>Ideas and concepts</h1>
+            <p>
+              <section>
+              <ol>
+			  <li>
+                  <a href="#integration-section">Integration of Data Acquisition Methods and Generation of 3D Models </a>
+				  
+				  In the first part of this proposed work, four types of methods are used and integrated as needed; namely, Close Range Photogrammetry (CRP), Terrestrial Laser Scanning (TLS), Structure from Motion-Multi View Stereo (SfM-MVS) and CAD modelling in order to have complete 3D model details. 
+				  The appropriate integration of the point-clouds to generate the most accurate 3D model requires careful inspection of the acquired data and creation of a suitable workflow. 
+				  Thus, the 3D models generated are used in the following stages of work.
+                </li>
+                <li>
+                  <a href="#library-section">Generation of an Architectural Element Library and Study of the Heritage and Its Evolution </a>
+				  
+				  To generate a library of the architectural elements of the created 3D model, it is required to identify and categorize the different architectural elements of the site. 
+				  For example, the typical historical buildings of the area have distinguishable features such as: 
+				  1.Typical wooden windows, ‘Roshans’ (large projecting three-sided wooden structure on building facades) 
+                  2.Carved and ornamental doors (mostly used for main entrances) 
+                  3.Creative forms of lattice work and fretted decorations such as Shish or Mashrabiya, which are mostly integrated into Roshans 
+                  4.Sgraffito (decorative plasterwork) (Alitany, 2014). This proposed library consists of models of such features, properly categorized and structured. 
+				  A thorough study of the elements and their histories will be carried out to provide information about the elements in order to facilitate future research and studies on the evolution of heritage. 
+				  In addition, it will act as a reference point for required reconstruction and model refinement work. 
+				  Moreover, it will also help the designers to work with period movies, games and educational applications.
+
+                </li>
+                <li>
+                  <a href="#HBIM-section">HBIM integrated with Geospatial Information System</a>
+				  
+				  Building Information Modelling (BIM) is a new standard for CAD drafting in the Architecture, Engineering, Construction, and Owner/Operator (AECO) industries. 
+				  This technology will play an important role in the design, reconstruction, maintenance of buildings, and for managing the essential building information in a digital format throughout the building lifecycle (Succar, 2009; Succar & Kassem, 2015). 
+				  The integration of heritage recording and BIM can document and manage historic buildings. 
+				  This method takes into account historical data, and layers in plug-in libraries that represent historical components of the buildings, including both geometric and non-geometric attributes and relationships. 
+				  The first step in the HBIM process is the remote collection of data set using terrestrial laser scanning with/or photogrammetry methods. 
+				  Next, is designing a library of parametric architectural objects that could be used for the digital modelling of many historic buildings. 
+				  Afterwards, these library objects are integrated with a technique for procedural modelling based on architectural rules and proportions automatically. 
+				  Finally, the HBIM model is completed with a combination of the manual refinement of the automated model and manual placement of other required library objects. 
+				  Models are usually extracted by experts to reach the maximum level of detail of the geometric representation, which mostly represent existing real world models in the form of geospatial information systems (de Laat and van Berlo, 2011). 
+				  Once the HBIM model is generated, the next stage involves the integration of the 3D model into GIS for further management and analysis in order to have non-architectural information such as vector datasets, raster datasets, and attribute data. 
+				  A Geographic Information System (GIS) provides means for storing, visualising and analysing geographic data. 
+				  Information, which is stored in database tables, is associated with geographic locations (map data) in order to spatially analyse data. Traditionally, GIS systems are compatible with 2D map data. 
+				  However, latest developments allow for the development of 3D GIS systems, which have much better capabilities for management, analysis and visualisation of increasingly heterogeneous collections of data. 
+				  Many applications and computer systems are designed for virtual reality that can be visited and navigated using maps. 
+				  The integration between virtual reality technology and leading geographic information systems (GIS) will enhance the role of GIS as a unique information container and decrease the gap between geographic information with two dimensions and three dimensions, which represents a new generation of GIS.
+                </li>
+                <li>
+                  <a href="#application-section">Development of a Holistic Application Based on AVR platforms</a>
+				  
+				  Virtual Reality (VR) can be thought of as a precursor to Augmented Reality (AR). 
+				  VR technologies can completely immerse a user in a synthetic environment and the users can be separated from the real world around them. 
+				  By contrast, AR allows the users to see the real world in real time enhanced with virtual object information, once they are coordinated correctly in order to display a coherent superposition. 
+				  Merging the real and virtual worlds in a mixed reality system generates a new environment where physical and digital objects co-exist and interact. 
+				  Augmented reality (AR) and augmented virtuality (AV) are located between virtual environment (VE) and real environment (RE), while AV is closer to VE and AR is closer to RE. 
+				  There are many different ways to stimulate AR. One of the earliest and most well-known ways is:
+				  1.Marker and image recognition: It recognizes the image or a particular feature on the image. 
+                  2.Geospatial augmented reality: It can recognize the location. 
+				  The concept for the AR application is the use of GPS that is already in the device to synchronize location data to BIM models. 
+				  Therefore, the devices used such as tablets or smartphones would recognise the exact location using GPS coordinates and be able to overlay the corresponding site information from the BIM model on top of the real-world view. 
+				  It gives the users the ability to see the 3D virtual view of the whole construction overlaid on the real-world view of the worksite easily. 
+				  In the work of Keil et al. (2011), an iPhone-based App was developed as a history and architecture guide for tourism on a cultural heritage site: Darmstadt Artist’s Colony, the Josef Maria Olbrich House, as the main example. 
+				  The App provides textual background information on the architect and offers a 3D model view when run in ‘classic information tour’ mode (Fig. 9). 
+				  However, when run in ‘augmented reality tour’ mode, the user can take a snapshot of the building ahead, and the App, after identifying the building, shows a 3D reconstruction of the building with information on the different elements of the building that have changed or are missing as an independent model viewed in the browser. 
+				  The 3D reconstruction reacts to user movements and changes its orientation and scale in response to the user’s position using data from the phone’s GPS and compass. 
+				  It also responds to two-finger multi-touch pinch, zoom and rotating gestures. 
+				  Although this App can provide the user with important information and a 3D model, the model used in this App has a sketch-like rendering, which curtails the ‘Reality’ aspect of AVR. Thus, the architectural elements of the model cannot be examined in detail. 
+				  Once the selected 3D model is generated, it is fed into AVR Platforms (Desktop PC, TV, wall mounted displays, 3D glasses or Head-mounted displays) to provide the user with an immersive experience. Historical Models with different levels of detail (LoD) are required for different purposes. 
+				  For example, in the preservation model, a very high level of detail is necessary. Whereas in the model to be used for providing information to the tourists, relatively lower levels of detail are required to facilitate smooth visualization and interaction (typically on computationally limited hardware). 
+				  High level of detail means large data volume, which may be difficult to render in the portable device that a tourist will be using. 
+				  Primarily, there are two components of the proposed application. 
+				  The VR component of the application enables the users to virtually walk past and inspect the models by using some interactive device. 
+				  For the AR component, a anumber of enhancements are added to the previously generated 3D model including: 
+				  1.Interactive option to learn about the history and legacy associated with the building and location. 
+                  2.Interactive option to learn about the architectural characteristics of the structures. 
+                  3.Interactive option to digitally reconstruct the buildings and the locations as they were in during a certain historical period
+                </li> 
+              </ol>
+            </section>
+            </p>
+        </section>
+		<section id="methods-section">
+            <h1>Ways of using the website</h1>
+            <p>
+              The user interface must be simple, intuitive, lightweight, and allows a high level of interactivity. 
+			  It also must be sufficiently flexible to enable customization according to the preference of the user as well as allowing a coordinated single/multi-view (split-screen) structure to support multi scene visualization.
+              Visualization requirements on the other hand include provision of real-time, effective, and high quality visual representation of monuments in 3D; collaborative visualization; support for styling visual representations; visualization of massive amount of geo-data; visualization in different levels of details and support for generalization; show and hide  capabilities at object or layer level; photorealistic views; temporal visualization; and visualization of results of modeling using proper visualization techniques.
+              The requirements for modeling and other functions include navigation through the 3D environment with support for zooming, panning, tilting and smooth seamless transitions between different locations; effective user and access level management to support security and privacy of data; support for integration and real-time data acquisition from a variety of heterogeneous sources in raster and vector formats; support for interoperability; provision of data definition (spatial/non- spatial) and manipulation in 3D to the user; support for computational analysis, modeling and simulation functions on the whole or subset of the city. 
+			  This set of requirements include: effective data storage and administration; support for modern data acquisition models and importing/integration of commonly used formats; definition of layers and 3D objects, their relationships and spatial and non-spatial attributes; support for storage of objects at different levels of details; support of dynamic geo-data; data management at object level; support for export of data to commonly exchanged formats; allowance for necessary conversion between formats within the platform; storage of library of 3D models; support for event-driven data management for data quality and consistency.
+
+            </p>
+        </section>
+
+        <section id="conclusions-section">
+            <h1>Conclusion</h1>
+            <p>
+             The proposed project aims to create a conceptual AVR model combined in a holistic pipeline that incorporates the needs and realities of tourism and heritage perservation within the context of a heritage site as a solution for digitally preserving increasing contextual awareness and attracting global tourists. 
+			 To achieve this outcome, it is necessary to carry out an extensive review of the existing approaches used to process and analyse model historic buildings and monuments, and preserve and restore such historic sites, as well as literature related to the combination of several technologies. 
+			 A novel integrated approach involving HBIM, 3D GIS, with mixed reality (MR) and transformation between heterogeneous data is proposed. 
+			 Therefore, using a combination of data sources collected by multiple technologies, a new integrated approach will be present, that increases context awareness of the architectural heritage of Romania cities, improves users' spatial experience via portable devices, and provides users’ interaction with the environment. 
+			 Our focus is multi-disciplinary research concerning both innovative Cultural Heritage Informatics and the use of technology for the digitization, representation, documentation, preservation, and communication of Cultural Heritage knowledge. 
+			 This paper serves as a reference source of the architectural heritage and of any changes, and contributes to the understanding of the architectural heritage of the historical elements using of AVR as a novel visualization tool. 
+			 It also contributes to the prediction of potential hazards and maintenance requirements of the historical monuments. 
+            </p>
+        </section>
+
+        <section id="upcoming-updates-section">
+            <h1>Upcoming Updates</h1>
+            <p>
+              Some of technologies used in this project are promising and bring strong capabilities, flexibility and extensibility to the architecture of the platform. In contrast, some of the others need reconsideration, and alternative technologies or approaches for their technical improvement should be utilized.
+              Today interoperability is starting to become a reality thanks to several international harmonization efforts, trying to solve the problem by offering open computing standards for management of geographical information. 
+			  However, there are a number of issues regarding data 3D visualization in a way that maximize usability and provides a profound understanding of the respective information space, fault tolerance, scalability, server-independent implementation,delayed-timetransactions, privacy, thus reﬂecting the need for further research. 
+			  This paper illustrate an ongoing research effort which aims at delivering a full infrastructure to access multiple systems with large amounts of complex data sets in an interoperable way, and to process geographical information within a 3D environment through the use of a Service Oriented Architecture.
+
+            </p>
+        </section>
+		 <section id="references-section">
+            <p>
+              <section>
+              <h1>References</h1>
+              <ol>
+			  <li>
+                  <a href="#ref1-section">Alitany, A. (2014). A new strategy of ICT integrated methodologies for 3D documentation: a case study of the projected wooden windows (The Roshans) in the historical city of Jeddah (Saudi Arabia)</a>
+                </li>
+                <li>
+                  <a href="#ref2-section">Autodesk. (2011). “Revit”, www.Autodesk.com/revit (30 June 2017).</a>
+                </li>
+				<li>
+                  <a href="#ref3-section">Baik, A., Yaagoubi, R., & Boehm, J. (2015). Integration of Jeddah Historical BIM and 3D GIS for Documentation and Restoration of Historical Monument. ISPRS-International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, 1, 29-34.</a>
+                </li>
+                <li>
+                  <a href="#ref4-section">Böhler, W., & Marbs, A. (2004). 3D scanning and photogrammetry for heritage recording: a comparison. In Proceedings of the 12th International Conference on Geoinformatics (pp. 291-298). Gavle University Press Sweden.</a>
+                </li>
+                <li>
+                  <a href="#ref5-section">Dore, C., & Murphy, M. (2012). Integration of HBIM and 3D GIS for Digital Heritage Modelling, Digital Documentation, 22- 23 October, 2012 Edinburgh, Scotland.</a>
+                </li>
+                <li>
+                  <a href="#ref6-section">Lindsay. Enhancing BIM with Augmented Reality. Retrieved from: http://www.augmentedev.com/blog/enhancing-bim-with- augmented-reality/ (30 June 2017).</a>
+                </li>
+                <li>
+                  <a href="#ref7-section">Remondino, F., & Campana, S. (2014). 3D Recording and Modelling in Archaeology and Cultural Heritage. BAR International Series, 2598</a>
+                </li> 
+				<li>
+                  <a href="#ref8-section">Unity (2017). Unity game Engine, from https://unity3d.com/ (30 June 2017).</a>
+                </li> 
+              </ol>
+            </section>
+
+            </p>
+        </section>
+    </body>
+</html>
